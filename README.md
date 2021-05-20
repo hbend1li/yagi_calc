@@ -1,18 +1,20 @@
 # Yagi Uda Antenna Calculator with Folded Dipole
 ## constant spacing of 0.2 λ .:. max. length is 5 λ
 
-![ f](res/yagi.png)
+![yagi antenna](res/yagi.png)
 
 ### Yagi Uda Antenna
 **Note :** It is quite possible, that other calculators deliver slightly different results. Some completely hide their algorithms. We use an interpolation approach. Our results are optimised for gain, but others may be optimised for bandwidth, ... However, if the parasitics differ much from 0.4 ±0.05 * λ or the gain is larger than 16 dBd you should get distrustful.
 
-![alt](res/dipole_folded.png)
+![Folded Dipole](res/dipole_folded.png)
 
 ### Folded Dipole
 The impedance of this antenna is around 300 Ω, so you may want to use a transformer or a λ/4 long piece of 120 Ω coaxial cable to match this impedance to 50 Ω. Geometriy is not that critical. If you want to put this thing outdoors, do not use brass, as it gets brittle.
 
 ## Example
 ### Settings parameter
+
+![yagi uda diagram](res/yagi-uda-diagram.png)
 set parameter in **settings.js** file.
 ```js
 module.exports = {
