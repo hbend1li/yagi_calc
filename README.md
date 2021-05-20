@@ -10,12 +10,12 @@
 The impedance of this antenna is around 300 Ω, so you may want to use a transformer or a λ/4 long piece of 120 Ω coaxial cable to match this impedance to 50 Ω. Geometriy is not that critical. If you want to put this thing outdoors, do not use brass, as it gets brittle.
 
 ### Parameter
-```json
+```js
 var antenna = {
-    "freq":2450,                          // in [MHz]
-    "elements":3,                         // 3..22 elements
-    "diameter_of_parasitic_elements":10,  // in [mm]
-    "diameter_of_boom":20,                // in [mm]
+    freq:2450,                          // in [MHz]
+    elements:3,                         // 3..22 elements
+    diameter_of_parasitic_elements:10,  // in [mm]
+    diameter_of_boom:20,                // in [mm]
 };
 ```
 
