@@ -16,7 +16,6 @@ var antenna = {
     elements:3,                         // 3..22 elements
     diameter_of_parasitic_elements:10,  // in [mm]
     diameter_of_boom:20,                // in [mm]
-    boom_isolated_from_parasitics: true // true, false
 };
 ```
 
@@ -24,42 +23,44 @@ var antenna = {
 ```bash
 $ nodejs yagi.js
 
-https://www.changpuak.ch/electronics/yagi_uda_antenna.php
-Javascript Version 12.01.2014, based on Rothammel / DL6WU
-Moded by Hamza BENDALI BRAHAM <hbendali@ya.ru>
--------------------------------------------------------------
- Frequency     :  2450 MHz
- Wavelength    :  122 mm
- Rod Diameter  :  10 mm
- Boom Diameter :  20 mm
- Boom Length   :  59 mm
- d/lambda      :  0.040    ( min.: 0.002 , max.: 0.01 )
- D/lambda      :  0.050    ( min.: 0.01 , max.: 0.05 )
- Elements      :  3
- Gain          :  5.23 dBd (approx.)
--------------------------------------------------------------
- Reflector Length   : 59 mm
- Reflector Position :  0 mm
--------------------------------------------------------------
- Dipole Position    : 29 mm
--------------------------------------------------------------
- Director #1 Position : 39 mm ,  Length : 56 mm
- Distance Dipole - Dir. #1 : 9 mm
--------------------------------------------------------------
- Directors / Parasitics are isolated. 
- Please choose an isolater thicker than : 3.1 mm
--------------------------------------------------------------
+**** YAGI UDA ANTENNA ***************************************
+ Design by www.changpuak.ch
+ https://www.changpuak.ch/electronics/yagi_uda_antenna.php
+ Javascript Version 10.11.2020.
+ Modified by Hamza BENDALI BRAHAM
+************************************************************
 
-- Folded Dipole ---------------------------------------------
- Image URL     :  https://www.changpuak.ch/electronics/images/DIPOLE_folded.png
- Lenght A      :  21.43 mm
- Lenght B      :  11.28 mm
- Lenght C      :  45.11 mm
- Lenght D      :  22.55 mm
- Lenght Gap    :  1.13 mm
- Radius R      :  3.59 mm
- Rod Diameter  :  0.41 mm
- Total Length  :  112.77 mm
+-------------------------------------------------------------
+ Frequency                : 2450  MHz
+ Wavelength               : 122.449  mm
+ d/lambda                 : 0.04  ( min.: 0.001 , max.: 0.04 )
+ D/lambda                 : 0.04  ( min.: 0.002 , max.: 0.04 )
+ Boomlength               : 49  mm
+ Elements                 : 3
+ Gain                     : 6.8  dB (approx.)
+-------------------------------------------------------------
+ Reflector Length         : 58  mm
+ Reflector Position       : 0  mm
+-------------------------------------------------------------
+ Dipole Length            : 59  mm
+ Dipole Position          : 24  mm
+-------------------------------------------------------------
+ Director Length          : 51  mm
+ Director Position        : 49  mm
+-------------------------------------------------------------
+ Calculations based on NBS TECHNICAL NOTE 688
+ Length might be slightly too long.
+ Manufacturing Tolerances : < 0  mm
+-------------------------------------------------------------
+ Folded Dipole            : res/dipole_folded.png
+ Lenght A                 : 21.43  mm
+ Lenght B                 : 11.28  mm
+ Lenght C                 : 45.11  mm
+ Lenght D                 : 22.55  mm
+ Lenght Gap               : 1.13  mm
+ Radius R                 : 3.59  mm
+ Rod Diameter             : 0.41  mm
+ Total Length             : 112.77  mm
 -------------------------------------------------------------
 ```
 
