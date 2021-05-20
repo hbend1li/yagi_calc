@@ -1,5 +1,9 @@
 const antenna = require('./settings.js');
 
+function format(e,p){
+    return ('        '+e.toFixed(0)).slice(-p)
+}
+
 function rechnen() {
 
     let freq = antenna.freq;                                // in [Mhz]
@@ -96,14 +100,14 @@ function rechnen() {
     
     abstand[0] = 0;
     dimension[0] = lambda * ( 0.4593 - 0.005 * Math.log(dl));   // REFLECTOR
-    result = result + " Reflector Length      -1 : " + dimension[0].toFixed(0) + "  mm\n";
-    result = result + " Reflector Position       : " + abstand[0].toFixed(0) + "  mm\n";
+    result = result + " Reflector Length      -1 : " + format(dimension[0],4) + "  mm\n";
+    result = result + " Reflector Position       : " + format(abstand[0],4) + "  mm\n";
     
     abstand[1] = 0.2 * lambda ;
     dimension[1] = 0.482 * lambda ;   // DIPOLE
     result = result + "-------------------------------------------------------------\n";
-    result = result + " Dipole Length (Driven) 0 : " + dimension[1].toFixed(0) + "  mm\n";
-    result = result + " Dipole Position          : " + abstand[1].toFixed(0) + "  mm\n";
+    result = result + " Dipole Length (Driven) 0 : " + format(dimension[1],4) + "  mm\n";
+    result = result + " Dipole Position          : " + format(abstand[1],4) + "  mm\n";
 
     j=1;
     elements = elements -2 ;
@@ -114,8 +118,8 @@ function rechnen() {
         dimension[j] = lambda * (-44674*dl*dl*dl*dl+2008.3*dl*dl*dl+23.178*dl*dl-3.1463*dl+0.4675)   // DIRECTOR
         dimension[j] = dimension[j] + lambda * ( 0.5 * boom_dicke_lambda + 0.002 ) // KORREKTUR AUFGRUND D/Lambda
         result = result + "-------------------------------------------------------------\n";
-        result = result + " Director Length       "+((' '+(j)).slice(-2))+" : " + dimension[j].toFixed(0) + "  mm\n";
-        result = result + " Director Position        : " + abstand[j].toFixed(0) + "  mm\n";
+        result = result + " Director Length       "+ format(j,2) +" : " + format(dimension[j],4) + "  mm\n";
+        result = result + " Director Position        : " + format(abstand[j],4) + "  mm\n";
         elements = elements - 1; 
     }
 
@@ -128,7 +132,7 @@ function rechnen() {
     const r = 0.1 / 3.141592653;
     const vf = 0.9209525 ; 
     let total_length = lambda * vf;
-    result = result + " Folded Dipole            : res/dipole_folded.png\n";
+    result = result + " Folded Dipole            :\n";
     result = result + " Lenght A                 : " + (total_length * 0.19).toFixed(2) + "  mm\n";
     result = result + " Lenght B                 : " + (total_length * 0.10).toFixed(2) + "  mm\n";
     result = result + " Lenght C                 : " + (total_length * 0.40).toFixed(2) + "  mm\n";
