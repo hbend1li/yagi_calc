@@ -12,6 +12,7 @@
 The impedance of this antenna is around 300 Ω, so you may want to use a transformer or a λ/4 long piece of 120 Ω coaxial cable to match this impedance to 50 Ω. Geometriy is not that critical. If you want to put this thing outdoors, do not use brass, as it gets brittle.
 
 ### Parameter settings.js
+set parameter in **settings.js** file.
 ```js
 module.exports = {
     freq:2450,                          // in [MHz]
@@ -68,6 +69,6 @@ $ nodejs yagi.js
 
 
 ## Ref
-- [Yagi Uda Antenna](https://www.changpuak.ch/electronics/yagi_uda_antenna.php)  
-- [Folded dipole](https://www.changpuak.ch/electronics/Dipole_folded.php) (changpuak.ch) 
-- [Folded dipole](https://www.nonstopsystems.com/radio/frank_radio_antenna_folded_dipole.htm) (frank @ nonstopsystems.com)
+- [Yagi Uda Antenna](https://www.changpuak.ch/electronics/yagi_uda_antenna.php)  (changpuak.ch)  
+- [Folded dipole](https://www.changpuak.ch/electronics/Dipole_folded.php) (changpuak.ch)  
+- [Folded dipole](https://www.nonstopsystems.com/radio/frank_radio_antenna_folded_dipole.htm) (frank @ nonstopsystems.com)  
