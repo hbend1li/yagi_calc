@@ -1,4 +1,4 @@
-import 'settings.js';
+const antenna = require('./settings.js');
 
 function rechnen() {
 
