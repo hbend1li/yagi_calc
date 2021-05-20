@@ -1,6 +1,8 @@
 # Yagi Uda Antenna Calculator with Folded Dipole
 ## constant spacing of 0.2 λ .:. max. length is 5 λ
 
+![ f](res/yagi.png)
+
 ### Yagi Uda Antenna
 **Note :** It is quite possible, that other calculators deliver slightly different results. Some are based on look-up tables, some completely hide their algorithms. We use an interpolation approach. Our results are optimised for gain, but others may be optimised for bandwidth, ... However, if the parasitics differ much from 0.4 ±0.05 * λ or the gain is larger than 16 dBd you should get distrustful.
 
