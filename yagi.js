@@ -100,7 +100,7 @@ function rechnen() {
     abstand[1] = 0.2 * lambda ;
     dimension[1] = 0.482 * lambda ;   // DIPOLE
     result = result + "-------------------------------------------------------------\n";
-    result = result + " Dipole Length, Driven  0 : " + Math.round(dimension[1]) + "  mm\n";
+    result = result + " Dipole Length (Driven) 0 : " + Math.round(dimension[1]) + "  mm\n";
     result = result + " Dipole Position          : " + Math.round(abstand[1]) + "  mm\n";
 
     j=1;
