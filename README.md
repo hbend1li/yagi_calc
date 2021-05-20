@@ -18,109 +18,72 @@ The impedance of this antenna is around 300 Ω, so you may want to use a transfo
 set parameter in **settings.js** file.
 ```js
 module.exports = {
-    freq:2450,                           // in [MHz]
-    elements:20,                         // 3..22 elements
-    diameter_of_parasitic_elements:4,    // in [mm]
-    diameter_of_boom:20,                 // in [mm];
+    freq:2450,                            // in [MHz]
+    elements:15,                          // 3..22 elements
+    diameter_of_parasitic_elements:4,     // in [mm]
+    diameter_of_boom:20,                  // in [mm]
+    boom_isolated:true,                   // true, false
 }
 ```
 
 ### Run yagi.js
 ```bash
-$ nodejs yagi.js
+$ nodejs yagi.js # Based on Rothammel / DL6WU
+```
+or
+```bash
+$ nodejs yagi_constant_spacing.js # constant spacing of 0.2 λ .:. max. length is 5 λ
+```
 
+```bash
 **** YAGI UDA ANTENNA ***************************************
  Design by www.changpuak.ch
  https://www.changpuak.ch/electronics/yagi_uda_antenna.php
- Javascript Version 10.11.2020, based on Rothammel / DL6WU
+ Javascript Version 12.01.2014, based on Rothammel / DL6WU
  moded by Hamza BENDALI BRAHAM
 *************************************************************
 
 -------------------------------------------------------------
- Frequency                : 2450  MHz
- Wavelength               : 122.449  mm
- d/lambda                 : 0.033  ( min.: 0.001 , max.: 0.04 )
- D/lambda                 : 0.040  ( min.: 0.002 , max.: 0.04 )
- Boom length              : 465  mm
- Boom diameter            : 4.9  mm
- Parasitic diameter       : 4.0  mm
- Elements                 : 20
- Gain                     : 13.8  dB (approx.)
+ Frequency          : 2400  MHz
+ Wavelength         : 125  mm
+ d/lambda           : 0.032  ( min.: 0.002 , max.: 0.01 )
+ D/lambda           : 0.050  ( min.: 0.01 , max.: 0.05 )
+ Boom Diameter      : 6.25  mm
+ Boom Length        : 505  mm
+ Elements           : 15
+ Rod Diameter       : 4  mm
+ Gain               : 13.88 dBd (approx.)
 -------------------------------------------------------------
- Reflector Length      -1 :   58  mm
- Reflector Position       :    0  mm
+ Reflector Position :  0 mm
+ Reflector Length   : 60 mm
 -------------------------------------------------------------
- Dipole Length (Driven) 0 :   59  mm
- Dipole Position          :   24  mm
+ Dipole Position    : 30 mm
+ Lenght A           : 21.87  mm
+ Lenght B           : 11.51  mm
+ Lenght C           : 46.05  mm
+ Lenght D           : 23.02  mm
+ Lenght E           : 7.33  mm
+ Lenght Gap         : 1.15  mm
+ Radius R           : 3.66  mm
+ Rod Diameter       : 0.42  mm
+ Total Length       : 115.12  mm
 -------------------------------------------------------------
- Director Length        2 :   53  mm
- Director Position        :   49  mm
+ Director #1        : Position:  39 mm (+9),  Length: 57 mm
+ Director #2        : Position:  62 mm (+23),  Length: 56 mm
+ Director #3        : Position:  89 mm (+27),  Length: 56 mm
+ Director #4        : Position: 120 mm (+31),  Length: 55 mm
+ Director #5        : Position: 155 mm (+35),  Length: 55 mm
+ Director #6        : Position: 193 mm (+38),  Length: 54 mm
+ Director #7        : Position: 232 mm (+39),  Length: 54 mm
+ Director #8        : Position: 273 mm (+41),  Length: 54 mm
+ Director #9        : Position: 316 mm (+43),  Length: 54 mm
+ Director #10       : Position: 361 mm (+45),  Length: 53 mm
+ Director #11       : Position: 408 mm (+47),  Length: 53 mm
+ Director #12       : Position: 456 mm (+48),  Length: 53 mm
+ Director #13       : Position: 505 mm (+49),  Length: 53 mm
 -------------------------------------------------------------
- Director Length        3 :   53  mm
- Director Position        :   73  mm
--------------------------------------------------------------
- Director Length        4 :   53  mm
- Director Position        :   98  mm
--------------------------------------------------------------
- Director Length        5 :   53  mm
- Director Position        :  122  mm
--------------------------------------------------------------
- Director Length        6 :   53  mm
- Director Position        :  147  mm
--------------------------------------------------------------
- Director Length        7 :   53  mm
- Director Position        :  171  mm
--------------------------------------------------------------
- Director Length        8 :   53  mm
- Director Position        :  196  mm
--------------------------------------------------------------
- Director Length        9 :   53  mm
- Director Position        :  220  mm
--------------------------------------------------------------
- Director Length       10 :   53  mm
- Director Position        :  245  mm
--------------------------------------------------------------
- Director Length       11 :   53  mm
- Director Position        :  269  mm
--------------------------------------------------------------
- Director Length       12 :   53  mm
- Director Position        :  294  mm
--------------------------------------------------------------
- Director Length       13 :   53  mm
- Director Position        :  318  mm
--------------------------------------------------------------
- Director Length       14 :   53  mm
- Director Position        :  343  mm
--------------------------------------------------------------
- Director Length       15 :   53  mm
- Director Position        :  367  mm
--------------------------------------------------------------
- Director Length       16 :   53  mm
- Director Position        :  392  mm
--------------------------------------------------------------
- Director Length       17 :   53  mm
- Director Position        :  416  mm
--------------------------------------------------------------
- Director Length       18 :   53  mm
- Director Position        :  441  mm
--------------------------------------------------------------
- Director Length       19 :   53  mm
- Director Position        :  465  mm
--------------------------------------------------------------
- Calculations based on NBS TECHNICAL NOTE 688
- Length might be slightly too long.
- Manufacturing Tolerances : < 0  mm
--------------------------------------------------------------
- Folded Dipole            :
- Lenght A                 : 21.43  mm
- Lenght B                 : 11.28  mm
- Lenght C                 : 45.11  mm
- Lenght D                 : 22.55  mm
- Lenght E                 : 7.18  mm
- Lenght Gap               : 1.13  mm
- Radius R                 : 3.59  mm
- Rod Diameter             : 0.41  mm
- Total Length             : 112.77  mm
+ Directors / Parasitics are isolated.
+ Please choose an isolater thicker than : 3 mm
 -------------------------------------------------------------
 ```
 
