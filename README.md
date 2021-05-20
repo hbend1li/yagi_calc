@@ -12,10 +12,10 @@ The impedance of this antenna is around 300 Ω, so you may want to use a transfo
 ### Parameter
 ```json
 var antenna = {
-    freq:2450,                          // in [MHz]
-    elements:3,                         // 3..22 elements
-    diameter_of_parasitic_elements:10,  // in [mm]
-    diameter_of_boom:20,                // in [mm]
+    "freq":2450,                          // in [MHz]
+    "elements":3,                         // 3..22 elements
+    "diameter_of_parasitic_elements":10,  // in [mm]
+    "diameter_of_boom":20,                // in [mm]
 };
 ```
 
