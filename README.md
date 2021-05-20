@@ -37,70 +37,72 @@ $ nodejs yagi.js
 -------------------------------------------------------------
  Frequency                : 2450  MHz
  Wavelength               : 122.449  mm
- d/lambda                 : 0.008  ( min.: 0.001 , max.: 0.04 )
- D/lambda                 : 0.008  ( min.: 0.002 , max.: 0.04 )
- Boomlength               : 465  mm
+ d/lambda                 : 0.033  ( min.: 0.001 , max.: 0.04 )
+ D/lambda                 : 0.040  ( min.: 0.002 , max.: 0.04 )
+ Boom length              : 465  mm
+ Boom diameter            : 4.9  mm
+ Parasitic diameter       : 4.0  mm
  Elements                 : 20
  Gain                     : 13.8  dB (approx.)
 -------------------------------------------------------------
- Reflector Length      -1 : 59  mm
+ Reflector Length      -1 : 58  mm
  Reflector Position       : 0  mm
 -------------------------------------------------------------
- Dipole Length, Driven  0 : 59  mm
+ Dipole Length (Driven) 0 : 59  mm
  Dipole Position          : 24  mm
 -------------------------------------------------------------
- Director Length        2 : 55  mm
+ Director Length        2 : 53  mm
  Director Position        : 49  mm
 -------------------------------------------------------------
- Director Length        3 : 55  mm
+ Director Length        3 : 53  mm
  Director Position        : 73  mm
 -------------------------------------------------------------
- Director Length        4 : 55  mm
+ Director Length        4 : 53  mm
  Director Position        : 98  mm
 -------------------------------------------------------------
- Director Length        5 : 55  mm
+ Director Length        5 : 53  mm
  Director Position        : 122  mm
 -------------------------------------------------------------
- Director Length        6 : 55  mm
+ Director Length        6 : 53  mm
  Director Position        : 147  mm
 -------------------------------------------------------------
- Director Length        7 : 55  mm
+ Director Length        7 : 53  mm
  Director Position        : 171  mm
 -------------------------------------------------------------
- Director Length        8 : 55  mm
+ Director Length        8 : 53  mm
  Director Position        : 196  mm
 -------------------------------------------------------------
- Director Length        9 : 55  mm
+ Director Length        9 : 53  mm
  Director Position        : 220  mm
 -------------------------------------------------------------
- Director Length       10 : 55  mm
+ Director Length       10 : 53  mm
  Director Position        : 245  mm
 -------------------------------------------------------------
- Director Length       11 : 55  mm
+ Director Length       11 : 53  mm
  Director Position        : 269  mm
 -------------------------------------------------------------
- Director Length       12 : 55  mm
+ Director Length       12 : 53  mm
  Director Position        : 294  mm
 -------------------------------------------------------------
- Director Length       13 : 55  mm
+ Director Length       13 : 53  mm
  Director Position        : 318  mm
 -------------------------------------------------------------
- Director Length       14 : 55  mm
+ Director Length       14 : 53  mm
  Director Position        : 343  mm
 -------------------------------------------------------------
- Director Length       15 : 55  mm
+ Director Length       15 : 53  mm
  Director Position        : 367  mm
 -------------------------------------------------------------
- Director Length       16 : 55  mm
+ Director Length       16 : 53  mm
  Director Position        : 392  mm
 -------------------------------------------------------------
- Director Length       17 : 55  mm
+ Director Length       17 : 53  mm
  Director Position        : 416  mm
 -------------------------------------------------------------
- Director Length       18 : 55  mm
+ Director Length       18 : 53  mm
  Director Position        : 441  mm
 -------------------------------------------------------------
- Director Length       19 : 55  mm
+ Director Length       19 : 53  mm
  Director Position        : 465  mm
 -------------------------------------------------------------
  Calculations based on NBS TECHNICAL NOTE 688
@@ -112,6 +114,7 @@ $ nodejs yagi.js
  Lenght B                 : 11.28  mm
  Lenght C                 : 45.11  mm
  Lenght D                 : 22.55  mm
+ Lenght E                 : 7.18  mm
  Lenght Gap               : 1.13  mm
  Radius R                 : 3.59  mm
  Rod Diameter             : 0.41  mm
