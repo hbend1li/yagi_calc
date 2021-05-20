@@ -11,7 +11,8 @@
 ### Folded Dipole
 The impedance of this antenna is around 300 Ω, so you may want to use a transformer or a λ/4 long piece of 120 Ω coaxial cable to match this impedance to 50 Ω. Geometriy is not that critical. If you want to put this thing outdoors, do not use brass, as it gets brittle.
 
-### Parameter settings.js
+## Example
+### Settings parameter
 set parameter in **settings.js** file.
 ```js
 module.exports = {
