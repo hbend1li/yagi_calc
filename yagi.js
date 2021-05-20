@@ -24,7 +24,7 @@ function rechnen() {
     let direktor_lambda=0;
     
     for (j=0;j<=21;j=j+1){
-        abstand[j] = Math.round( 0.2 * lambda * j );
+        abstand[j] = 0.2 * lambda * j;
     }				
 
     // dimension[0] = Anzahl Elemente
@@ -69,9 +69,9 @@ function rechnen() {
     
     result = result + "-------------------------------------------------------------\n";
     result = result + " Frequency                : " + freq + "  MHz\n";
-    result = result + " Wavelength               : " + Math.round(1000*lambda)/1000 + "  mm\n";
-    result = result + " d/lambda                 : " + Math.round(1000*direktor_lambda)/1000 + "  ( min.: 0.001 , max.: 0.04 )\n";
-    result = result + " D/lambda                 : " + Math.round(1000*boom_dicke_lambda)/1000 + "  ( min.: 0.002 , max.: 0.04 )\n";
+    result = result + " Wavelength               : " + ((1000*lambda)/1000).toFixed(3) + "  mm\n";
+    result = result + " d/lambda                 : " + ((1000*direktor_lambda)/1000).toFixed(3) + "  ( min.: 0.001 , max.: 0.04 )\n";
+    result = result + " D/lambda                 : " + ((1000*boom_dicke_lambda)/1000).toFixed(3) + "  ( min.: 0.002 , max.: 0.04 )\n";
 
     let dl = direktor_lambda;
     let laenge_lambda = (elements -1 )* 0.2 ;
@@ -87,21 +87,23 @@ function rechnen() {
     let gain = (g1 + g2 + g3) / 3 ;
     // -------------------------------------------------------------------------
 
-    result = result + " Boomlength               : " + Math.round((elements-1) * 0.2 * lambda) + "  mm\n";
+    result = result + " Boom length              : " + ((elements-1) * 0.2 * lambda).toFixed(0) + "  mm\n";
+    result = result + " Boom diameter            : " + boom.toFixed(1) + "  mm\n";
+    result = result + " Parasitic diameter       : " + parasitic.toFixed(1) + "  mm\n";
     result = result + " Elements                 : " + elements + "\n";
-    result = result + " Gain                     : " + Math.round(10*gain)/10 + "  dB (approx.)\n";
+    result = result + " Gain                     : " + ((10*gain)/10).toFixed(1) + "  dB (approx.)\n";
     result = result + "-------------------------------------------------------------\n";
     
     abstand[0] = 0;
     dimension[0] = lambda * ( 0.4593 - 0.005 * Math.log(dl));   // REFLECTOR
-    result = result + " Reflector Length      -1 : " + Math.round(dimension[0]) + "  mm\n";
-    result = result + " Reflector Position       : " + Math.round(abstand[0]) + "  mm\n";
+    result = result + " Reflector Length      -1 : " + dimension[0].toFixed(0) + "  mm\n";
+    result = result + " Reflector Position       : " + abstand[0].toFixed(0) + "  mm\n";
     
     abstand[1] = 0.2 * lambda ;
     dimension[1] = 0.482 * lambda ;   // DIPOLE
     result = result + "-------------------------------------------------------------\n";
-    result = result + " Dipole Length (Driven) 0 : " + Math.round(dimension[1]) + "  mm\n";
-    result = result + " Dipole Position          : " + Math.round(abstand[1]) + "  mm\n";
+    result = result + " Dipole Length (Driven) 0 : " + dimension[1].toFixed(0) + "  mm\n";
+    result = result + " Dipole Position          : " + abstand[1].toFixed(0) + "  mm\n";
 
     j=1;
     elements = elements -2 ;
@@ -112,28 +114,30 @@ function rechnen() {
         dimension[j] = lambda * (-44674*dl*dl*dl*dl+2008.3*dl*dl*dl+23.178*dl*dl-3.1463*dl+0.4675)   // DIRECTOR
         dimension[j] = dimension[j] + lambda * ( 0.5 * boom_dicke_lambda + 0.002 ) // KORREKTUR AUFGRUND D/Lambda
         result = result + "-------------------------------------------------------------\n";
-        result = result + " Director Length       "+((' '+(j)).slice(-2))+" : " + Math.round(dimension[j]) + "  mm\n";
-        result = result + " Director Position        : " + Math.round(abstand[j]) + "  mm\n";
+        result = result + " Director Length       "+((' '+(j)).slice(-2))+" : " + dimension[j].toFixed(0) + "  mm\n";
+        result = result + " Director Position        : " + abstand[j].toFixed(0) + "  mm\n";
         elements = elements - 1; 
     }
 
     result = result + "-------------------------------------------------------------\n";
     result = result + " Calculations based on NBS TECHNICAL NOTE 688\n";
     result = result + " Length might be slightly too long.\n";
-    result = result + " Manufacturing Tolerances : < "  + Math.round(0.002*lambda) + "  mm\n";
+    result = result + " Manufacturing Tolerances : < "  + (0.002*lambda).toFixed(0) + "  mm\n";
 
     result = result + "-------------------------------------------------------------\n";
-    const pi = 3.141592653;
+    const r = 0.1 / 3.141592653;
     const vf = 0.9209525 ; 
+    let total_length = lambda * vf;
     result = result + " Folded Dipole            : res/dipole_folded.png\n";
-    result = result + " Lenght A                 : " + (lambda * 0.19 * vf).toFixed(2) + "  mm\n";
-    result = result + " Lenght B                 : " + (lambda * 0.10 * vf).toFixed(2) + "  mm\n";
-    result = result + " Lenght C                 : " + (lambda * 0.40 * vf).toFixed(2) + "  mm\n";
-    result = result + " Lenght D                 : " + (lambda * 0.20 * vf).toFixed(2) + "  mm\n";
-    result = result + " Lenght Gap               : " + (lambda * 0.01 * vf).toFixed(2) + "  mm\n";
-    result = result + " Radius R                 : " + (lambda * ( 0.10 / pi ) * vf).toFixed(2) + "  mm\n";
+    result = result + " Lenght A                 : " + (total_length * 0.19).toFixed(2) + "  mm\n";
+    result = result + " Lenght B                 : " + (total_length * 0.10).toFixed(2) + "  mm\n";
+    result = result + " Lenght C                 : " + (total_length * 0.40).toFixed(2) + "  mm\n";
+    result = result + " Lenght D                 : " + (total_length * 0.20).toFixed(2) + "  mm\n";
+    result = result + " Lenght E                 : " + (total_length * r * 2).toFixed(2) + "  mm\n";
+    result = result + " Lenght Gap               : " + (total_length * 0.01).toFixed(2) + "  mm\n";
+    result = result + " Radius R                 : " + (total_length * r).toFixed(2) + "  mm\n";
     result = result + " Rod Diameter             : " + (lambda / 300 ).toFixed(2) + "  mm\n";
-    result = result + " Total Length             : " + (lambda * vf).toFixed(2) + "  mm\n";
+    result = result + " Total Length             : " + (total_length).toFixed(2) + "  mm\n";
 
     // https://www.nonstopsystems.com/radio/frank_radio_antenna_folded_dipole.htm
     result = result + "-------------------------------------------------------------\n";
