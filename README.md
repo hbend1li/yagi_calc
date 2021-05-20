@@ -69,5 +69,5 @@ $ nodejs yagi.js
 
 ## Ref
 - [Yagi Uda Antenna](https://www.changpuak.ch/electronics/yagi_uda_antenna.php)  
-- [Folded dipole](https://www.changpuak.ch/electronics/Dipole_folded.php)  
-- [Folded dipole](https://www.nonstopsystems.com/radio/frank_radio_antenna_folded_dipole.htm)  
+- [Folded dipole](https://www.changpuak.ch/electronics/Dipole_folded.php) (changpuak.ch) 
+- [Folded dipole](https://www.nonstopsystems.com/radio/frank_radio_antenna_folded_dipole.htm) (frank@nonstopsystems.com)
