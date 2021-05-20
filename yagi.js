@@ -14,9 +14,8 @@ function rechnen() {
     result = result + " Design by www.changpuak.ch\n";
 
     result = result + " https://www.changpuak.ch/electronics/yagi_uda_antenna.php" +'\n';
-    result = result + " Javascript Version 10.11.2020." +'\n';
-
-    result = result + " Modified by Hamza BENDALI BRAHAM\n";
+    result = result + " Javascript Version 10.11.2020, based on Rothammel / DL6WU" +'\n';
+    result = result + " moded by Hamza BENDALI BRAHAM\n";
     result = result + "************************************************************\n\n";
 
     let boom_dicke_lambda=0;
