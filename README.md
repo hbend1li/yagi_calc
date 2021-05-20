@@ -1,5 +1,4 @@
 # Yagi Uda Antenna Calculator with Folded Dipole
-## constant spacing of 0.2 λ .:. max. length is 5 λ
 
 ![yagi antenna](res/yagi.png)
 
@@ -26,7 +25,7 @@ module.exports = {
 }
 ```
 
-### Run yagi.js
+### RUN
 ```bash
 $ nodejs yagi.js # Based on Rothammel / DL6WU
 ```
@@ -88,7 +87,8 @@ $ nodejs yagi_constant_spacing.js # constant spacing of 0.2 λ .:. max. length i
 ```
 
 
-## Ref
+### References
 - [Yagi Uda Antenna](https://www.changpuak.ch/electronics/yagi_uda_antenna.php)  (changpuak.ch)  
 - [Folded dipole](https://www.changpuak.ch/electronics/Dipole_folded.php) (changpuak.ch)  
 - [Folded dipole](https://www.nonstopsystems.com/radio/frank_radio_antenna_folded_dipole.htm) (frank @ nonstopsystems.com)  
+- [Wikipedia.org](https://en.wikipedia.org/wiki/Yagi%E2%80%93Uda_antenna)  
