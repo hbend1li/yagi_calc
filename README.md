@@ -29,7 +29,7 @@ $ nodejs yagi.js
 **** YAGI UDA ANTENNA ***************************************
  Design by www.changpuak.ch
  https://www.changpuak.ch/electronics/yagi_uda_antenna.php
- Javascript Version 10.11.2020.
+ Javascript Version 10.11.2020, based on Rothammel / DL6WU
  Modified by Hamza BENDALI BRAHAM
 *************************************************************
 
