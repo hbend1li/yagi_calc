@@ -94,13 +94,13 @@ function rechnen() {
     
     abstand[0] = 0;
     dimension[0] = lambda * ( 0.4593 - 0.005 * Math.log(dl));   // REFLECTOR
-    result = result + " Reflector Length         : " + Math.round(dimension[0]) + "  mm\n";
+    result = result + " Reflector Length      -1 : " + Math.round(dimension[0]) + "  mm\n";
     result = result + " Reflector Position       : " + Math.round(abstand[0]) + "  mm\n";
     
     abstand[1] = 0.2 * lambda ;
     dimension[1] = 0.482 * lambda ;   // DIPOLE
     result = result + "-------------------------------------------------------------\n";
-    result = result + " Dipole Length            : " + Math.round(dimension[1]) + "  mm\n";
+    result = result + " Dipole Length, Driven  0 : " + Math.round(dimension[1]) + "  mm\n";
     result = result + " Dipole Position          : " + Math.round(abstand[1]) + "  mm\n";
 
     j=1;
@@ -112,7 +112,7 @@ function rechnen() {
         dimension[j] = lambda * (-44674*dl*dl*dl*dl+2008.3*dl*dl*dl+23.178*dl*dl-3.1463*dl+0.4675)   // DIRECTOR
         dimension[j] = dimension[j] + lambda * ( 0.5 * boom_dicke_lambda + 0.002 ) // KORREKTUR AUFGRUND D/Lambda
         result = result + "-------------------------------------------------------------\n";
-        result = result + " Director Length          : " + Math.round(dimension[j]) + "  mm\n";
+        result = result + " Director Length       "+((' '+(j)).slice(-2))+" : " + Math.round(dimension[j]) + "  mm\n";
         result = result + " Director Position        : " + Math.round(abstand[j]) + "  mm\n";
         elements = elements - 1; 
     }
