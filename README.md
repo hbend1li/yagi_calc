@@ -31,7 +31,7 @@ $ nodejs yagi.js
  https://www.changpuak.ch/electronics/yagi_uda_antenna.php
  Javascript Version 10.11.2020.
  Modified by Hamza BENDALI BRAHAM
-************************************************************
+*************************************************************
 
 -------------------------------------------------------------
  Frequency                : 2450  MHz
